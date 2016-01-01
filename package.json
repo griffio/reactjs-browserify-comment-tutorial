@@ -1,6 +1,6 @@
 {
   "name": "reactjs-browserify-comment-tutorial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "reactjs browserify",
   "repository": {
     "type": "git",
@@ -15,19 +15,18 @@
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
-    "marked": "^0.3.3",
-    "react": "^0.12.2"
+    "marked": "^0.3.5",
+    "react": "^0.14.3"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "reactify": "^1.0.0",
-    "tape": "^3.5.0",
+    "babelify": "^7.2.0",
+    "babel-preset-react": "^6.3.13",
+    "browserify": "^12.0.1",
+    "tape": "^4.4.0",
     "uglifyify": "^3.0.1"
   },
   "browserify": {
-    "transform": [
-      "reactify"
-    ]
+    "transform": [ "babelify" ]
   },
   "testling": {}
 }
