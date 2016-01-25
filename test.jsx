@@ -7,8 +7,8 @@ var CommentForm = require('./tutorial/commentForm.jsx');
 var CommentList = require('./tutorial/commentList.jsx');
 
 var comments = [
-    {author: "Pete Hunt", text: "This is one comment"},
-    {author: "Jordan Walke", text: "This is *another* comment"}
+    {id: 99, author: "Pete Hunt", text: "This is one comment"},
+    {id: 101, author: "Jordan Walke", text: "This is *another* comment"}
 ];
 
 Tape('CommentBox', function (t) {
