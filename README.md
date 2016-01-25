@@ -20,7 +20,7 @@ Uses "marked" npm module for MarkDown(tm)
 Browserify, Testling
 
 ~~~
-npm install -g browserify testling
+npm install -g beefy browserify testling
 ~~~
 
 ### Commands
