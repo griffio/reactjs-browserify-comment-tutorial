@@ -9,14 +9,16 @@
   "main": "index.js",
   "scripts": {
     "test": "browserify test.jsx | testling -x open",
-    "bundle": "browserify --entry index.jsx --outfile bundle.js --debug",
-    "serve": "beefy index.jsx:bundle.js --open"
+    "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js",
+    "preserve": "browserify --require react --require react-dom --outfile react-bundle.js",
+    "serve": "beefy index.jsx:bundle.js --open -- -x react -x react-dom"
   },
   "author": "griffio",
   "license": "ISC",
   "dependencies": {
     "marked": "^0.3.5",
-    "react": "^0.14.3"
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
   },
   "devDependencies": {
     "babelify": "^7.2.0",
