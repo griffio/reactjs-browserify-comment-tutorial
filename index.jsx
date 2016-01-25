@@ -1,8 +1,9 @@
 var React = require("react");
+var ReactDom = require("react-dom");
 var CommentBox = require('./tutorial/commentBox.jsx');
 
 var comments = [
-    {author: "Pete Hunt", text: "This is one comment"},
-    {author: "Jordan Walke", text: "This is *another* comment"}
+    {id: 31, author: "Pete Hunt", text: "This is a comment"},
+    {id: 42, author: "Jordan Walke", text: "This is *another* comment"}
 ];
-React.render(<CommentBox data={comments} />, document.getElementById("content"));
+ReactDom.render(<CommentBox data={comments} />, document.getElementById("content"));
