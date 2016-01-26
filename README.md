@@ -10,6 +10,7 @@ livereactload updates browser when your scripts change.
 
 ~~~
 "scripts": {
+    "preserve": "browserify --require react --require react-dom --outfile react-bundle.js",
     "serve": "beefy index.jsx:bundle.js --open -- --plugin livereactload --external react --external react-dom"
   }
 
