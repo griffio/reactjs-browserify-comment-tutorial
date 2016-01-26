@@ -1,17 +1,20 @@
 #ReadMe
 
-react 0.14.6, babelify, testling, beefy
+react 0.14.6, babelify, testling, beefy, livereactload
 
 ##Simple starter project for React.js
 
-npm script to split into react bundle to speed up start/reload times
+npm script to split into react bundle to speed up start/reload times.
+
+livereactload updates browser when your scripts change.
+
 ~~~
 "scripts": {
-    "test": "browserify test.jsx | testling -x open",
-    "bundle": "browserify --external react --external react-dom --entry index.jsx --outfile bundle.js",
-    "preserve": "browserify --require react --require react-dom --outfile react-bundle.js",
-    "serve": "beefy index.jsx:bundle.js --open --live -- -x react -x react-dom"
-  },
+    "serve": "beefy index.jsx:bundle.js --open -- --plugin livereactload --external react --external react-dom"
+  }
+
+npm install
+npm run serve
 ~~~
 
 [From the React Tutorial](http://facebook.github.io/react/docs/tutorial.html)
