@@ -1,6 +1,6 @@
 var Tape = require('tape');
-var React = require('react/addons');
-var ReactTestUtils = React.addons.TestUtils;
+var React = require('react');
+var ReactTestUtils = require('react-addons-test-utils');
 var Comment = require('./tutorial/comment.jsx');
 var CommentBox = require('./tutorial/commentBox.jsx');
 var CommentForm = require('./tutorial/commentForm.jsx');
@@ -29,9 +29,9 @@ Tape('CommentForm', function (t) {
 
     t.plan(1);
 
-    var commentform = ReactTestUtils.renderIntoDocument(<CommentForm />);
+    var commentForm = ReactTestUtils.renderIntoDocument(<CommentForm />);
 
-    var renderedType = ReactTestUtils.scryRenderedComponentsWithType(commentform, CommentForm);
+    var renderedType = ReactTestUtils.scryRenderedComponentsWithType(commentForm, CommentForm);
 
     t.ok(renderedType, "CommentForm added to document tree");
 
